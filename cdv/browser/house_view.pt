@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master">
+
+    <metal:block fill-slot="content-core">
+        <div>
+            <div>
+                <h3>Podsumowanie:</h3> <span tal:content="context/description">this gets replaced</span>
+            </div>
+            <div>
+                <h3>Typ ogłoszenia:</h3> <span tal:content="context/house_type">this gets replaced</span>
+            </div>
+            <div>
+                <h3>Liczba pokoi:</h3> <span tal:content="context/number_of_rooms">this gets replaced</span>
+            </div>
+            <div>
+                <h3>Treść ogłoszenia:</h3> <span tal:content="structure context/getText">this gets replaced</span>
+            </div>
+            <div>
+                <h3>Miniaturka:</h3> <img tal:attributes="src python: context.absolute_url() + '/image_preview'" />
+            </div>
+        </div>
+    </metal:block>
+
+</html>
