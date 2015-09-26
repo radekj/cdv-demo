@@ -9,6 +9,7 @@ house_schema = type_schema.copy() + atapi.Schema((
 
     atapi.StringField(
         'house_type',
+        required=True,
         vocabulary=atapi.DisplayList(
             (('house', 'Dom'),
              ('flat', 'Mieszkanie'),
@@ -21,6 +22,7 @@ house_schema = type_schema.copy() + atapi.Schema((
 
     atapi.IntegerField(
         'number_of_rooms',
+        required=True,
         widget=atapi.IntegerWidget(
             label=u"Liczba pokoi"
         ),
