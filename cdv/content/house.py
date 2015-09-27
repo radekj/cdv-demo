@@ -28,11 +28,20 @@ house_schema = type_schema.copy() + atapi.Schema((
         ),
     ),
 
+    atapi.StringField(
+        'address',
+        required=True,
+        widget=atapi.TextAreaWidget(
+            label=u'Adres'
+        ),
+    )
+
 ))
 
 
 house_schema.moveField("number_of_rooms", after="title")
 house_schema.moveField("house_type", after="title")
+house_schema.moveField('address', after='title')
 
 
 class House(FolderishDocument):

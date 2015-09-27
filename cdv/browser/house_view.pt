@@ -6,6 +6,10 @@
     <metal:block fill-slot="content-core">
         <div>
             <div>
+                <h3>Adres:</h3>
+                <span tal:content="context/address" />
+            </div>
+            <div>
                 <h3>Podsumowanie:</h3> <span tal:content="context/description">this gets replaced</span>
             </div>
             <div>

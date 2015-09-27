@@ -10,4 +10,12 @@
       template="house_view.pt"
       />
 
+    <browser:page
+        for="*"
+        name="home_page_view"
+        permission="zope2.View"
+        class=".home_page_view.HomePageView"
+        template="home_page_view.pt"
+        />
+
 </configure>
